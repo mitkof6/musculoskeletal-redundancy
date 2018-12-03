@@ -23,7 +23,7 @@ version of OpenSim (v4.0). The Gait10dof18musc dataset was used in the python
 code because it has less muscles and the sampling of the feasible space is fully
 exploited. Please open the following notebook to run the algorithm:
 
-[Interactive Jupyter Notebook](file:python/feasible_joint_reaction_loads.ipynb)
+[Interactive Jupyter Notebook](python/feasible_joint_reaction_loads.ipynb)
 
 Required Data
 ---

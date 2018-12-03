@@ -50,18 +50,18 @@ The user can navigate into the corresponding folders and inspect the source
 code. The following case studies are provided in the form of interactive Jupyter
 notebooks:
 
-- [Arm Model](file:arm_model/model.ipynb) presents a case study using muscle space
+- [Arm Model](arm_model/model.ipynb) presents a case study using muscle space
   projection to study the response of segmental level reflexes
 
-- [Muscle Space Projection](file:arm_model/muscle_space_projection.ipynb)
+- [Muscle Space Projection](arm_model/muscle_space_projection.ipynb)
   demonstrates muscle space projection in the context of segmental level
   (reflex) modeling
 
-- [Feasible Muscle Forces](file:arm_model/feasible_muscle_forces.ipynb) uses
+- [Feasible Muscle Forces](arm_model/feasible_muscle_forces.ipynb) uses
   task space projection to simulate a simple hand movement, where the feasible
   muscle forces that satisfy this task are calculated and analyzed
 
-- [Feasible Joint Reaction Loads](file:feasible_joint_reaction_loads/python/feasible_joint_reaction_loads.ipynb)
+- [Feasible Joint Reaction Loads](feasible_joint_reaction_loads/python/feasible_joint_reaction_loads.ipynb)
   demonstrates the utilization of the feasible muscle forces to calculate the
   bounds of the joint reaction loads during walking
 
