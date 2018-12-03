@@ -1,0 +1,92 @@
+% Created 2018-12-03 Mon 21:30
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{parskip}
+\author{Dimitar Stanev\thanks{stanev@ece.upatras.gr}}
+\date{}
+\title{Modeling musculoskeletal kinematic and dynamic redundancy using null space projection}
+\hypersetup{
+ pdfauthor={Dimitar Stanev},
+ pdftitle={Modeling musculoskeletal kinematic and dynamic redundancy using null space projection},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section*{Overview}
+\label{sec:org18874a7}
+
+This repository contains the setup scripts, documentation and source code
+relevant to the publication "Dimitar Stanev, Konstantinos Moustakas Modeling
+musculoskeletal kinematic and dynamic redundancy using null space projection,
+PLOS ONE".
+
+\section*{How to run the Docker image}
+\label{sec:org58d42ad}
+
+In order to provide a portable setup on which the published simulations and
+analyses can be interactively reviewed, modified and executed, the provided
+environment is built as a Docker image. Docker is available a multitude of
+platforms and detailed installation instructions are provided as \href{https://docs.docker.com/install/}{part of the
+project's online documentation}. After installation, switch to the toplevel
+directory of this repository and build the docker image:
+\begin{verbatim}
+docker build -t ubuntu_opensim_stanev .
+\end{verbatim}
+You can change the name of the image (here \texttt{ubuntu\_opensim\_stanev}) to your
+liking. After building, which should take a few minutes, the image can be run
+in a container with the following command:
+\begin{verbatim}
+docker run -it -p 4000:80 ubuntu_opensim_stanev
+\end{verbatim}
+The \texttt{-it} option instructs \texttt{docker} to run in interactive terminal mode, while
+the \texttt{-p 4000:80} option bind the port 80 of the image to the port 4000 of the
+localhost. Of course, the image name should match the one used in the build
+command and the port 4000 can be substituted with any available port on the
+localhost. After running the docker, open \url{http://localhost:4000} in your
+browser and fill in the string 'stanev' (without the quotes) in the password
+prompt.
+
+\section*{Demos}
+\label{sec:orgff42cfa}
+
+The user can navigate into the corresponding folders and inspect the source
+code. The following case studies are provided in the form of interactive
+Jupyter notebooks:
+
+\begin{itemize}
+\item \textbf{arm\_model/model.ipynb} presents a case study using muscle space
+projection to study the response of segmental level reflexes
+
+\item \textbf{arm\_model/muscle\_space\underprojection.ipynb} demonstrates
+muscle space projection in the context of segmental level (reflex) modeling
+
+\item \textbf{arm\_model/feasible\_muscle\_forces.ipynb} uses task space
+projection to simulate a simple hand movement, where the feasible muscle
+forces that satisfy this task are calculated and analyzed
+
+\item \textbf{feasible\_joint\_reaction\_loads/python/feasible\_joint\_reaction\_loads.ipynb}
+demonstrates the utilization of the feasible muscle forces to calculate the
+bounds of the joint reaction loads during walking
+\end{itemize}
+
+The .html files corresponding to the .ipynb notebooks included in the folders
+contain the pre-executed results of the demos.
+\end{document}

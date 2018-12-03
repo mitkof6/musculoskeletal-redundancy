@@ -1,0 +1,1 @@
+docker/opensim-core-stable2.tar.xz filter=lfs diff=lfs merge=lfs -text
