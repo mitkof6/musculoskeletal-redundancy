@@ -7,8 +7,7 @@ is essential for the assessment of joint reaction loads. Consequently, the null
 space muscle forces can significantly alter the reaction forces without
 affecting the movement. Please open the following notebook to run the algorithm:
 
-[[file:feasible_joint_reaction_loads.ipynb][{Interactive Jupyter Notebook}]]
-
+[Feasible Joint Reaction Loads](feasible_joint_reaction_loads.ipynb)
 
 Scripts for performing the extended joint reaction analysis are also
 provided. The script execution must follow the following order:
