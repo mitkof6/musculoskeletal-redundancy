@@ -8,9 +8,10 @@
 * Overview
 
   This repository contains the setup scripts, documentation and source code
-  relevant to the publication "Dimitar Stanev, Konstantinos Moustakas Modeling
+  relevant to the publication "D. Stanev and Konstantinos Moustakas, Modeling
   musculoskeletal kinematic and dynamic redundancy using null space projection,
-  PLOS ONE".
+  PLoS ONE, 14(1): e0209171, Jan. 2019, DOI:
+  https://doi.org/10.1371/journal.pone.0209171".
 
 * How to run the Docker image
 

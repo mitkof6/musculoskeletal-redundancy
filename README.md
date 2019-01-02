@@ -5,8 +5,9 @@ Description
 
 This project contains the source code related to the following publication:
 
-Dimitar Stanev, and Konstantinos Moustakas, Modeling musculoskeletal
-kinematic and dynamic redundancy using null space projection, PLOS ONE
+D. Stanev and Konstantinos Moustakas, Modeling musculoskeletal kinematic and 
+dynamic redundancy using null space projection, PLoS ONE, 14(1): e0209171, 
+Jan. 2019, DOI: https://doi.org/10.1371/journal.pone.0209171
 
 The coordination of the human musculoskeletal system is deeply influenced by its
 redundant nature, in both kinematic and dynamic terms. Noticing a lack of a
