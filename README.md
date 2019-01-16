@@ -1,4 +1,12 @@
+Modeling musculoskeletal kinematic and dynamic redundancy using null space projection
+===
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2000421.svg)](https://doi.org/10.5281/zenodo.2000421)
+
+`git lfs install`
+
+`git lfs clone https://github.com/mitkof6/musculoskeletal-redundancy.git`
+
 
 Description
 ---
