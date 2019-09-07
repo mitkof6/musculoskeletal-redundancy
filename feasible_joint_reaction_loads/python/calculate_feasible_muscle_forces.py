@@ -72,6 +72,10 @@ if compute:
         # is the minimum effort solution. If the model is able to satisfy the
         # action without needing reserve forces then we can use fm_par = -RBarT
         # * tau as obtained form Inverse Dynamics.
+        # A better implementation that usese fm_par = -RBarT * tau is provided:
+        # https://github.com/mitkof6/feasible_muscle_force_analysis
+        # this implementation also supports nonlinear muscles and can excluded 
+        # muscles and coordinates from the analysis
         fm_par_temp = fm
 
         Z_temp, b_temp = construct_muscle_space_inequality(NR_temp,
