@@ -4,8 +4,7 @@
 # perform_joint_reaction_batch.py, the joint of interest and the mass of the
 # subject must be provided.
 #
-# @author Dimitar Stanev (jimstanev@gmail.com)
-#
+# @author Dimitar Stanev (stanev@ece.upatras.gr)
 import os
 import matplotlib.pyplot as plt
 import numpy as np
@@ -16,14 +15,13 @@ from util import readMotionFile, index_containing_substring
 ###############################################################################
 # parameters
 
-subject_dir = os.getcwd() + '/../dataset/Gait10dof18musc/'
-os_jra_file = subject_dir + 'notebook_results/subject01_walk_JointReaction_ReactionLoads.sto'
-jra_results_dir = subject_dir + 'notebook_results/joint_reaction_analyses/'
-figures_dir = subject_dir + 'notebook_results/fig/'
+subject_dir = os.getcwd() + '/../data/gait1018/'
+os_jra_file = os.getcwd() + '/results/subject01_walk1_JointReaction_ReactionLoads.sto'
+jra_results_dir = os.getcwd() + '/results/joint_reaction_analyses/'
+figures_dir = os.getcwd() + '/results/fig/'
 
 collect = True
-use_abs = False
-joint = 'hip_l'
+joint = 'knee_l'
 joints = 3
 mass = 72.6  # kg
 g = 9.8  # m/s^2
@@ -67,10 +65,6 @@ if collect:
         header, labels, data = readMotionFile(jra_results_dir + f)
         simulationData[i, :, :] = np.array(data)
 
-
-if use_abs:
-    simulationData = np.abs(simulationData)
-    os_data = np.abs(os_data)
 
 # def _plot_range_band(central_data=None, ci=None, data=None, *args, **kwargs):
 #     upper = data.max(axis=0)

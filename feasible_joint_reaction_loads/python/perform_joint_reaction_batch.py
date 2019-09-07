@@ -5,7 +5,6 @@
 # actuators (not used) and the directory containing the feasible muscle forces.
 #
 # @author Dimitar Stanev (jimstanev@gmail.com)
-#
 import os
 from tqdm import tqdm
 from opensim_utils import perform_jra
@@ -13,14 +12,14 @@ from opensim_utils import perform_jra
 ###############################################################################
 # parameters
 
-subject_dir = os.getcwd() + '/../dataset/Gait10dof18musc/'
-model_file = subject_dir + 'subject01.osim'
-grf_file = subject_dir + 'subject01_walk_grf.mot'
-grf_xml_file = subject_dir + 'subject01_walk_grf.xml'
-reserve_actuators_file = subject_dir + 'reserve_actuators.xml'
-ik_file = subject_dir + 'notebook_results/subject01_walk_ik.mot'
-feasible_set_dir = subject_dir + 'notebook_results/feasible_force_set/'
-jra_results_dir = subject_dir + 'notebook_results/joint_reaction_analyses/'
+subject_dir = os.getcwd() + '/../data/gait1018/'
+model_file = subject_dir + 'subject01_scaled.osim'
+grf_file = subject_dir + 'subject01_walk1_grf.mot'
+grf_xml_file = subject_dir + 'subject01_walk1_grf.xml'
+reserve_actuators_file = subject_dir + 'subject01_actuators.xml'
+ik_file = os.getcwd() + '/results/subject01_walk1_InverseKinematics.mot'
+feasible_set_dir = os.getcwd() + '/results/feasible_force_set/'
+jra_results_dir = os.getcwd() + '/results/joint_reaction_analyses/'
 
 if not (os.path.isfile(model_file) and
         os.path.isfile(ik_file) and
@@ -30,8 +29,9 @@ if not (os.path.isfile(model_file) and
     raise RuntimeError('required files do not exist')
 
 if not (os.path.isdir(feasible_set_dir) and
-       os.path.isdir(jra_results_dir)):
+        os.path.isdir(jra_results_dir)):
     raise RuntimeError('required folders do not exist')
+
 
 # get all files in the directory
 feasible_force_files = os.listdir(feasible_set_dir)
@@ -50,10 +50,11 @@ for i, force_file in enumerate(tqdm(feasible_force_files)):
     if i < previous_iteration:
          continue
 
-    if i > previous_iteration + 300:
-        print('please terminate python and rerun this script (RAM usage problem)')
+    if i > previous_iteration + 1:
+        print('terminate python and rerun this script (RAM usage problem)')
         break
 
     perform_jra(model_file, ik_file, grf_file, grf_xml_file,
                 reserve_actuators_file, feasible_set_dir + force_file,
-                jra_results_dir, prefix=str(i) + '_')
+                jra_results_dir, str(i) + '_',
+                ['ALL'], ['child'], ['ground'])

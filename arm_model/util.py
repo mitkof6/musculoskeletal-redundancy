@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import os
 import time
 import sympy as sp
@@ -539,7 +537,7 @@ def test_ellipse():
     xc = vec([0, 0])
     M = mat([[2, 1], [1, 2]])
     # M = mat([[-2.75032375, -11.82938331], [-11.82938331, -53.5627191]])
-    print np.linalg.matrix_rank(M)
+    print(np.linalg.matrix_rank(M))
     phi, l, v = draw_ellipse(ax, xc, M, 1, True)
     print(phi, l, v)
     ax.set_xlabel('x')
@@ -773,8 +771,8 @@ def plot_corr_ellipses(data, ax=None, **kwargs):
     # xy locations of each ellipse center
     xy = np.indices(M.shape)[::-1].reshape(2, -1).T
 
-    # set the relative sizes of the major/minor axes according to the strength of
-    # the positive/negative correlation
+    # set the relative sizes of the major/minor axes according to the strength
+    # of the positive/negative correlation
     w = np.ones_like(M).ravel()
     h = 1 - np.abs(M).ravel()
     a = 45 * np.sign(M).ravel()

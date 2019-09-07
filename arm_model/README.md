@@ -8,8 +8,9 @@ redundant.
 Dependencies
 ---
 
-The scripts are compatible with python 2. Dependencies can be installed through
-python package manager (pip). The following libraries were used in the project:
+The scripts are compatible with python 3.7. Dependencies can be installed
+through python package manager (pip). The following libraries were used in the
+project:
 
 - scipy (`pip install scipy`)
 - pydy (`pip install pydy`)

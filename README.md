@@ -79,6 +79,12 @@ notebooks:
 The .html files corresponding to the .ipynb notebooks included in the folders
 contain the pre-executed results of the demos.
 
+For the calculation of the feasible muscle forces using the OpenSim
+API one can use the following code that has some more new features and
+improvements:
+
+https://github.com/mitkof6/feasible_muscle_force_analysis
+
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
 alt="Creative Commons License" style="border-width:0"

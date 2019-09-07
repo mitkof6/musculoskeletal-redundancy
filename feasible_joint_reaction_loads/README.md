@@ -39,6 +39,6 @@ Required Data
 Results
 ---
 
-Results are pre-computed and stored in the dataset/xxx/notebook_results/fig folder.
+Results are pre-computed and stored in the python/results/folder.
 
-![Normalized Joint Reaction Loads](dataset/Gait10dof18musc/notebook_results/fig/hip_l.png)
+![Normalized Joint Reaction Loads](python/results/fig/hip_l.png)

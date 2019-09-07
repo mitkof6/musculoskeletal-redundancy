@@ -12,8 +12,8 @@ affecting the movement. Please open the following notebook to run the algorithm:
 Scripts for performing the extended joint reaction analysis are also
 provided. The script execution must follow the following order:
 
-1. *perform_opensim_analysis.py* - run inverse kinematics, static optimization
-and joint reaction analysis on the desired dataset.
+1. *perform_opensim_analysis.py* - run inverse kinematics, inverse dynamics,
+static optimization and joint reaction analysis on the desired dataset.
 
 2. *calculate_feasible_muscle_forces.py* - using the results from the previous
 step calculates the feasible muscle forces that satisfies the action and the
@@ -29,10 +29,10 @@ and obtain the min/max joint bounds.
 Dependencies
 ---
 
-The scripts are compatible with python 2. Dependencies can be installed through
+The scripts are compatible with python 3.7. Dependencies can be installed through
 python package manager (pip). The following libraries were used in the project:
 
-- OpenSim: python wrappings [Tested Version](https://github.com/mitkof6/opensim-core/tree/stable_2)
+- OpenSim 4.0: Python bindings
 - sympy: `pip install sympy`
 - numpy: `pip install numpy`
 - matplotlib: `pip install matplotlib`
